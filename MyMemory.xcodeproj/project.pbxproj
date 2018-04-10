@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A14A7F2A207CED02002BDBD1 /* MemoFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14A7F29207CED02002BDBD1 /* MemoFormVC.swift */; };
+		A14A7F2C207CED21002BDBD1 /* MemoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14A7F2B207CED21002BDBD1 /* MemoListVC.swift */; };
+		A14A7F2E207CED3F002BDBD1 /* MemoReadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14A7F2D207CED3F002BDBD1 /* MemoReadVC.swift */; };
+		A14A7F30207CEDA7002BDBD1 /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14A7F2F207CEDA7002BDBD1 /* MemoCell.swift */; };
 		A1AD636E207C85CA001118C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AD636D207C85CA001118C4 /* AppDelegate.swift */; };
 		A1AD6373207C85CA001118C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1AD6371207C85CA001118C4 /* Main.storyboard */; };
 		A1AD6376207C85CA001118C4 /* MyMemory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1AD6374207C85CA001118C4 /* MyMemory.xcdatamodeld */; };
@@ -34,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A14A7F29207CED02002BDBD1 /* MemoFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoFormVC.swift; sourceTree = "<group>"; };
+		A14A7F2B207CED21002BDBD1 /* MemoListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListVC.swift; sourceTree = "<group>"; };
+		A14A7F2D207CED3F002BDBD1 /* MemoReadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoReadVC.swift; sourceTree = "<group>"; };
+		A14A7F2F207CEDA7002BDBD1 /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
 		A1AD636A207C85CA001118C4 /* MyMemory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMemory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1AD636D207C85CA001118C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1AD6372207C85CA001118C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,6 +111,10 @@
 				A1AD6379207C85CA001118C4 /* LaunchScreen.storyboard */,
 				A1AD637C207C85CA001118C4 /* Info.plist */,
 				A1AD6374207C85CA001118C4 /* MyMemory.xcdatamodeld */,
+				A14A7F29207CED02002BDBD1 /* MemoFormVC.swift */,
+				A14A7F2B207CED21002BDBD1 /* MemoListVC.swift */,
+				A14A7F2D207CED3F002BDBD1 /* MemoReadVC.swift */,
+				A14A7F2F207CEDA7002BDBD1 /* MemoCell.swift */,
 			);
 			path = MyMemory;
 			sourceTree = "<group>";
@@ -257,7 +269,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1AD6376207C85CA001118C4 /* MyMemory.xcdatamodeld in Sources */,
+				A14A7F2E207CED3F002BDBD1 /* MemoReadVC.swift in Sources */,
+				A14A7F2A207CED02002BDBD1 /* MemoFormVC.swift in Sources */,
+				A14A7F2C207CED21002BDBD1 /* MemoListVC.swift in Sources */,
 				A1AD636E207C85CA001118C4 /* AppDelegate.swift in Sources */,
+				A14A7F30207CEDA7002BDBD1 /* MemoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
