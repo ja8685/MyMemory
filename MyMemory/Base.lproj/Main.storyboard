@@ -17,7 +17,7 @@
         <scene sceneID="ceh-Sa-25x">
             <objects>
                 <tableViewController id="ZjF-8C-UAK" customClass="MemoListVC" customModule="MyMemory" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="lPB-1o-O5J">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="lPB-1o-O5J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -46,7 +46,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1970-01-01 19:01:30" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOX-m9-CYb" userLabel="날짜">
-                                            <rect key="frame" x="269" y="-3" width="65" height="43.5"/>
+                                            <rect key="frame" x="269" y="0.0" width="65" height="62"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="lessThanOrEqual" constant="65" id="CTL-SD-bzu"/>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="43.5" id="Hi9-Ax-vy2"/>
@@ -64,7 +64,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="글의 내용" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4j-rE-97p">
-                                            <rect key="frame" x="10" y="26" width="249" height="54"/>
+                                            <rect key="frame" x="10" y="25" width="249" height="54"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="5SH-gB-Utm"/>
                                                 <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="5WF-Vw-wb8"/>
@@ -91,7 +91,9 @@
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="xOX-m9-CYb" secondAttribute="bottom" constant="40" id="3f0-qD-EpV"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="xOX-m9-CYb" secondAttribute="bottom" constant="10" id="Ck6-PR-5bH"/>
+                                        <constraint firstAttribute="trailing" secondItem="xOX-m9-CYb" secondAttribute="trailing" id="GSG-jv-e4w"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="J4j-rE-97p" secondAttribute="bottom" constant="7.5" id="IPB-KZ-tnJ"/>
                                         <constraint firstItem="xOX-m9-CYb" firstAttribute="leading" secondItem="GNc-62-fYm" secondAttribute="trailing" constant="10" id="Pmf-me-W44"/>
                                         <constraint firstItem="J4j-rE-97p" firstAttribute="top" secondItem="GNc-62-fYm" secondAttribute="bottom" constant="5" id="TQI-Qs-jqY"/>
@@ -101,12 +103,18 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="xOX-m9-CYb" secondAttribute="trailing" id="eY7-cN-CDD"/>
                                         <constraint firstItem="J4j-rE-97p" firstAttribute="leading" secondItem="OVx-Hv-QXj" secondAttribute="leadingMargin" constant="10" id="ifP-Eg-pDv"/>
                                         <constraint firstItem="GNc-62-fYm" firstAttribute="leading" secondItem="OVx-Hv-QXj" secondAttribute="leading" constant="10" id="sMG-qn-Pxa"/>
+                                        <constraint firstItem="xOX-m9-CYb" firstAttribute="top" secondItem="OVx-Hv-QXj" secondAttribute="top" id="sUX-kz-TqO"/>
                                         <constraint firstItem="J4j-rE-97p" firstAttribute="leading" secondItem="OVx-Hv-QXj" secondAttribute="leading" constant="10" id="tcO-pt-pxW"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="J4j-rE-97p" secondAttribute="trailing" constant="10" id="wHh-ug-QLP"/>
                                         <constraint firstItem="J4j-rE-97p" firstAttribute="leading" secondItem="OVx-Hv-QXj" secondAttribute="leadingMargin" constant="10" id="xpi-fW-A4G"/>
                                         <constraint firstItem="GNc-62-fYm" firstAttribute="top" secondItem="OVx-Hv-QXj" secondAttribute="top" id="zfs-gn-Nln"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="contents" destination="J4j-rE-97p" id="BXD-UB-dA8"/>
+                                    <outlet property="regdate" destination="xOX-m9-CYb" id="Lhd-y5-AKe"/>
+                                    <outlet property="subject" destination="GNc-62-fYm" id="OCe-BB-aOV"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="memoCellWithImage" rowHeight="80" id="pEY-dT-PKy" customClass="MemoCell" customModule="MyMemory" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="108" width="375" height="80"/>
@@ -176,6 +184,12 @@
                                         <constraint firstItem="9zK-yu-2HC" firstAttribute="top" secondItem="Zri-li-YQg" secondAttribute="topMargin" constant="10" id="ynM-Ol-i1K"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="contents" destination="WFc-QD-Uc7" id="SrC-jl-bWv"/>
+                                    <outlet property="img" destination="i4R-fP-v8h" id="KdN-M0-ZDC"/>
+                                    <outlet property="regdate" destination="9zK-yu-2HC" id="Agk-0X-0Cp"/>
+                                    <outlet property="subject" destination="aw0-Lh-gdO" id="xJZ-Rh-FCh"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -247,10 +261,22 @@
                     </view>
                     <navigationItem key="navigationItem" title="메모 작성" id="O5Q-3c-GQd">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="camera" id="uq5-bM-B9a"/>
-                            <barButtonItem title="저장" id="8nd-Ar-LhS"/>
+                            <barButtonItem systemItem="camera" id="uq5-bM-B9a">
+                                <connections>
+                                    <action selector="pick_:" destination="VmS-xL-wdQ" id="fNr-7G-xRt"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="저장" id="8nd-Ar-LhS">
+                                <connections>
+                                    <action selector="save_:" destination="VmS-xL-wdQ" id="nmE-de-eQ9"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="contents" destination="kqm-Z6-Z3M" id="Cle-Oh-LDu"/>
+                        <outlet property="preview" destination="alb-6W-7uj" id="K2U-VC-DTh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kHG-co-hL5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
